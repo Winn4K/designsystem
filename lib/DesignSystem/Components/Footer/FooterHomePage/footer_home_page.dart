@@ -31,14 +31,14 @@ class FooterHomePage extends StatelessWidget {
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
-                    color: isSelected ? const Color.fromARGB(255, 251, 255, 0) : const Color.fromARGB(255, 0, 0, 0), // Cor baseada na seleção
+                    color: isSelected ? const Color.fromARGB(255, 201, 203, 65) : const Color.fromARGB(255, 0, 0, 0), // Cor baseada na seleção
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
                 SizedBox(height: 4),
                 Text(
                   item,
-                  style: TextStyle(color: isSelected ? const Color.fromARGB(255, 251, 255, 0) : const Color.fromARGB(255, 0, 0, 0), fontWeight: FontWeight.bold),
+                  style: TextStyle(color: isSelected ? const Color.fromARGB(255, 201, 203, 65) : const Color.fromARGB(255, 0, 0, 0), fontWeight: FontWeight.bold),
                 ),
               ],
             ),
