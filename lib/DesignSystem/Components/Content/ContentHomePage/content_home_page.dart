@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'content_home_page_view_model.dart';
+import '../ContentSignupPage/content_signup_page.dart'; // Altere para o caminho correto do seu arquivo
+
 
 class ContentHomePage extends StatelessWidget {
   final ContentHomePageViewModel viewModel;
@@ -64,7 +66,8 @@ class ContentHomePage extends StatelessWidget {
                     children: [
                       Text(
                         viewModel.name,
-                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
                       ),
                       Text(
                         viewModel.email,
@@ -81,7 +84,8 @@ class ContentHomePage extends StatelessWidget {
                 title: Text('Edit Name'),
                 trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
-                  _showEditNameDialog(context); // Exibe o diálogo para editar o nome
+                  _showEditNameDialog(
+                      context); // Exibe o diálogo para editar o nome
                 },
               ),
               Divider(),
@@ -121,7 +125,12 @@ class ContentHomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: GestureDetector(
                   onTap: () {
-                    // Ação ao clicar em Logout
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              SignupPage()), // Navega para a SignupPage
+                    );
                   },
                   child: Text(
                     'Logout',

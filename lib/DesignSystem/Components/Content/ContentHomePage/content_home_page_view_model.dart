@@ -32,4 +32,6 @@ class ContentHomePageViewModel extends ChangeNotifier {
       imageUrl: 'https://cdn-icons-png.flaticon.com/512/4042/4042356.png', // URL da imagem
     );
   }
+
+  
 }
